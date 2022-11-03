@@ -32,3 +32,18 @@ label:hover{
     cursor: pointer;
     border-radius: 20px;
 }
+
+form{
+    display: block;
+    padding: 7px;
+    border-radius: 7px;
+    border: 2px dashed rgb(0, 0, 0);
+    margin-bottom: 3px;
+}
+
+li.list-group-item {
+    min-height: calc(1.5em + 1rem + 2px);
+    padding: .5rem 1rem;
+    font-size: 1.25rem;
+    border-radius: .5rem;
+}
