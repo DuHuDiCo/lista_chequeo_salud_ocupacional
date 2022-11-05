@@ -49,17 +49,14 @@
         <label><b>Cumple:</b></label>
         <ul class="list-group">
             <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.0" value="p0">
+            <input class="form-check-input me-1" type="radio" name="hojas_serguridad_sustancias_quimicas"  value="true" [(ngModel)]="sustanciasQuimicas.hojas_serguridad_sustancias_quimicas">
             <label class="form-check-label" for="firstRadio">Si</label>
             </li>
             <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.0" value="p0" id="secondRadio">
+            <input class="form-check-input me-1" type="radio" name="hojas_serguridad_sustancias_quimicas" value="false" [(ngModel)]="sustanciasQuimicas.hojas_serguridad_sustancias_quimicas"   id="secondRadio" >
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.0" value="p0" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li>
+            
         </ul><br>
 
 
@@ -69,17 +66,14 @@
         <label><b>Cumple:</b></label>
         <ul class="list-group">
             <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.1" value="p0" id="firstRadio" >
+            <input class="form-check-input me-1" type="radio" name="sustancias_quimacas_etiquetadas" value="true" [(ngModel)]="sustanciasQuimicas.sustancias_quimacas_etiquetadas"   id="firstRadio" >
             <label class="form-check-label" for="firstRadio">Si</label>
             </li>
             <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.1" value="p0" id="secondRadio">
+            <input class="form-check-input me-1" type="radio" name="sustancias_quimacas_etiquetadas" value="false" [(ngModel)]="sustanciasQuimicas.sustancias_quimacas_etiquetadas" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.1" value="p0" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li>
+            
         </ul><br>
 
 
@@ -90,17 +84,14 @@
         <label><b>Cumple:</b></label>
         <ul class="list-group">
             <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.2" value="p0" id="firstRadio" >
+            <input class="form-check-input me-1" type="radio"  name="gafas_seguridad_guantes_nitrilo" value="true" [(ngModel)]="sustanciasQuimicas.gafas_seguridad_guantes_nitrilo" id="firstRadio" >
             <label class="form-check-label" for="firstRadio">Si</label>
             </li>
             <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.2" value="p0" id="secondRadio">
+            <input class="form-check-input me-1" type="radio" name="gafas_seguridad_guantes_nitrilo" value="false" [(ngModel)]="sustanciasQuimicas.gafas_seguridad_guantes_nitrilo" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.2" value="p0" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -110,27 +101,24 @@
         <label><b>Cumple:</b></label>
         <ul class="list-group">
             <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.3" value="p0" id="firstRadio" >
+            <input class="form-check-input me-1" type="radio" name="sustancias_quimicas_almacenadas" value="true" [(ngModel)]="sustanciasQuimicas.sustancias_quimicas_almacenadas" id="firstRadio" >
             <label class="form-check-label" for="firstRadio">Si</label>
             </li>
             <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.3" value="p0" id="secondRadio">
+            <input class="form-check-input me-1" type="radio" name="sustancias_quimicas_almacenadas" value="false" [(ngModel)]="sustanciasQuimicas.sustancias_quimicas_almacenadas" name="cuadro1.3" value="p0" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro1.3" value="p0" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li>
+            
         </ul>
     </section>
 
     <div class="mb-3">
         <label for="exampleFormControlTextarea1" class="form-label"><b>Observaciones:</b></label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" id="exampleFormControlTextarea1" name="observaciones" value="true" [(ngModel)]="sustanciasQuimicas.observaciones" rows="3"></textarea>
     </div>
     <div class="mb-3">
         <label for="formFile" class="form-label">Agregar una Evidencia o foto</label>
-        <input capture="camera" class="form-control" type="file" id="formFile">
+        <input capture="camera" class="form-control"  type="file" id="formFile" multiple>
     </div>
 
     <!-- Final del primer cuadro de preguntas  -->
@@ -156,10 +144,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro2.0" value="p1" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro2.0" value="p1" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li>
+            
         </ul>
     </section>
 
@@ -196,10 +181,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro3.0" value="p3" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro3.0" value="p3" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -216,10 +198,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro3.1" value="p3" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro3.1" value="p3" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+           
         </ul>
 
 
@@ -237,9 +216,7 @@
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
             <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro3.2" value="p3" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -256,10 +233,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadrado3.3" value="p3" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadrado3.3" value="p3" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
         <ul class="list-group" id="cuadro3.4">
@@ -275,10 +249,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro3.4" value="p3" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro3.4" value="p3" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li>
+            
         </ul>
     </section>
 
@@ -315,10 +286,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro4.0" value="p4" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro4.0" value="p4" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -335,10 +303,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro4.1" value="p4" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro4.1" value="p4" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -355,10 +320,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro4.2" value="p4" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro4.2" value="p4" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -375,10 +337,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro4.3" value="p4" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro4.3" value="p4" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
         <ul class="list-group" id="cuadro4.4">
@@ -394,10 +353,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro4.4" value="p4" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro4.4" value="p4" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
         <ul class="list-group" id="cuadro4.5">
@@ -413,10 +369,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro4.5" value="p5" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro4.5" value="p5" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+           
         </ul>
 
         <ul class="list-group">
@@ -432,10 +385,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro4.6" value="p4" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro4.6" value="p4" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
         <ul class="list-group" id="cuadro4.7">
@@ -451,10 +401,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro4.7" value="p4" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro4.7" value="p4" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
         <ul class="list-group" id="cuadro4.8">
@@ -470,10 +417,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro4.8" value="p4" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro4.8" value="p4" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li>
+           
         </ul>
     </section>
 
@@ -511,10 +455,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro5.0" value="p5" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro5.0" value="p5" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -531,10 +472,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro5.1" value="p5" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro5.1" value="p5" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -551,10 +489,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro5.2" value="p5" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro5.2" value="p5" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+           
         </ul>
 
 
@@ -571,10 +506,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro5.3" value="p5" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro5.3" value="p5" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
         <ul class="list-group" id="cuadro5.4">
@@ -590,10 +522,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro5.4" value="p5" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro5.4" value="p5" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+           
         </ul>
 
         <ul class="list-group" id="cuadro5.5">
@@ -609,10 +538,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro5.5" value="p5" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro5.5" value="p5" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li>
+            
         </ul>
     </section>
 
@@ -647,10 +573,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro6.0" value="p6" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro6.0" value="p6" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -667,10 +590,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro6.0" value="p6" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro6.0" value="p6" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li>
+            
         </ul>
     </section>
     <div class="mb-3">
@@ -705,10 +625,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro7.0" value="p7" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro7.0" value="p7" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -725,10 +642,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro7.1" value="p7" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro7.1" value="p7" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -745,10 +659,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro7.2" value="p7" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro7.2" value="p7" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
 
@@ -765,10 +676,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro7.3" value="p7" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro7.3" value="p7" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
         <ul class="list-group" id="cuadro7.4">
@@ -784,10 +692,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro7.4" value="p7" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro7.4" value="p7" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li><br>
+            
         </ul>
 
         <ul class="list-group" id="cuadro7.5">
@@ -803,10 +708,7 @@
             <input class="form-check-input me-1" type="radio" name="cuadro7.5" value="p7" id="secondRadio">
             <label class="form-check-label" for="secondRadio">No</label>
             </li>
-            <li class="list-group-item">
-            <input class="form-check-input me-1" type="radio" name="cuadro7.5" value="p7" id="thirdRadio">
-            <label class="form-check-label" for="thirdRadio">N/A</label>
-            </li>
+            
         </ul>
     </section>
 
@@ -824,5 +726,5 @@
                 Si, he leido y presto mi consentimiento a los terminos de Uso del sitio y al procedimiento, al tratamiendo y a la transaferencia de mis datos personales conforme a lo dispuesto a la politica de Privacidad.
             </label>
         </div><br>
-        <button type="button" class="btn btn-dark">Finalizar Formulario</button><br><br>
+        <button type="button" (click)="print()" class="btn btn-dark">Finalizar Formulario</button><br><br>
 </div>
