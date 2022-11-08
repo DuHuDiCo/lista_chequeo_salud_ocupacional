@@ -47,3 +47,7 @@ li.list-group-item {
     font-size: 1.25rem;
     border-radius: .5rem;
 }
+
+.list-group-item {
+border: #fff;
+}
