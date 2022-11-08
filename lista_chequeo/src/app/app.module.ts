@@ -10,7 +10,7 @@ import { ResultadosComponent } from './Usuario/resultados/resultados.component';
 import { ModalComponent } from './Usuario/modal/modal.component';
 import { LoginComponent } from './Usuario/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
