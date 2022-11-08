@@ -1,0 +1,17 @@
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+        <div class="fadeIn first">
+            <img src="../../assets/logo-Principal.png" id="icon" alt="User Icon" />
+            <b><h1>Iniciar sesión</h1></b>
+        </div>
+
+        <form (ngSubmit)="iniciarSesion()">
+            <input type="text" id="login" class="fadeIn second" name="username" placeholder="usuario" [(ngModel)]="login.username">
+            <input type="password" id="password" class="fadeIn third" name="password" placeholder="contraseña" [(ngModel)]="login.password">
+            <input type="submit" class="fadeIn fourth" value="Entrar" >
+        </form>
+    </div>
+</div> 
+

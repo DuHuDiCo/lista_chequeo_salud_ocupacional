@@ -3,19 +3,24 @@
     <div class="fadeIn first">
         <img src="../../assets/logo-Principal.png" id="icon" alt="User Icon" />
     </div>
+
 <div class="container">
     <header>
         <strong><h1>Formato de Inspección</h1></strong>
     </header><br>
 
     <form>
-        <ul class="list-group">
-            <li class="list-group-item">Codigo: </li><br>
-
-            <li class="list-group-item">Version: 1</li><br>
-
-            <li class="list-group-item">Fecha: Marzo de 2021</li><br>
-        </ul>
+        <div class="row">
+            <div class="col-md-4">
+                <h5><b>codigo:</b></h5>
+            </div>
+            <div class="col-md-4">
+                <h5><b>Version: 1</b></h5>
+            </div>
+            <div class="col-md-4">
+                <h5><b>Fecha: marzo del 2021</b></h5>
+            </div>
+        </div><br>
         
         <div class="mb-3">
             <label>Inspeccion realizada por:</label>
@@ -28,13 +33,16 @@
         </div>
         
         <div class="mb-3">
-            <label>Punto de venta: </label>
-            <input class="form-control form-control-lg" type="text" aria-label=".form-control-lg example">
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Seleccione su almacen</option>
+                <option value="1">Electro Hogar #2</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
         </div>
     </form><br>
 
     <!-- Final del codigo en el que el encargado deja sus datos para el formulario  -->
-
 
     <!-- 1 Primer cuadro de las encuestas  -->
     <header>
