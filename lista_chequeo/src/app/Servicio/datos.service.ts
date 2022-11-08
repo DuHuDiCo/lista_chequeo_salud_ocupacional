@@ -9,7 +9,13 @@ export class DatosService {
 
   constructor(private http: HttpClient) { }
 
-  public enviarResultados(enviar:any){
-    return this.http.get(`${base}/all`,enviar)
+  public guardarFormato(formato:any){
+    return this.http.post(`${base}/save`, formato);
   }
+
+
+  //metodo mal echo
+  // public enviarResultados(enviar:any){
+  //   return this.http.get(`${base}/all`,enviar)
+  // }
 }

@@ -10,6 +10,8 @@ import { ResultadosComponent } from './Usuario/resultados/resultados.component';
 import { ModalComponent } from './Usuario/modal/modal.component';
 import { LoginComponent } from './Usuario/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NgToastModule } from 'ng-angular-popup';
+
 
 
 @NgModule({
@@ -25,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgToastModule
   ],
   providers: [],
   bootstrap: [AppComponent]
