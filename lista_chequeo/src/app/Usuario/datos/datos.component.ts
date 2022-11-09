@@ -16,7 +16,7 @@ export class DatosComponent implements OnInit {
   formatoInspeccion = {
     codigo: "",
     fecha: '2021-03-01',
-    realizdoBy: '',
+    realizadoBy: '',
     fecha_inspeccion: '',
     punto_venta: '',
     sustanciasQuimicas: {},
@@ -151,7 +151,7 @@ export class DatosComponent implements OnInit {
 
   }
   print() {
-    console.log(this.sustanciasQuimicas)
+    console.log(this.formatoInspeccion)
   }
 
 
