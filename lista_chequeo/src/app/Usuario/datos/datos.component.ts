@@ -291,6 +291,7 @@ export class DatosComponent implements OnInit {
       (data:any)=>{
         this.almacenes = data;
         
+        
       },(error:any)=>{
         console.log(error);
       }

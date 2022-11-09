@@ -36,7 +36,7 @@
         </div>
 
         <div class="mb-3">
-            <select class="form-select" aria-label="Default select example">
+            <select [(ngModel)]="formatoInspeccion.punto_venta" name="punto_venta" class="form-select" aria-label="Default select example">
                 <option selected value="">Seleccione su almacen</option>
                 <option  value="{{a.nombre}}" *ngFor="let a of almacenes">{{a.nombre}}</option>
                 
@@ -1104,5 +1104,5 @@
     </div>
 
 
-    <button type="button" (click)="print()" class="btn btn-dark">Finalizar Formulario</button><br><br>
+    <button type="button" (click)="guardarFormato()" class="btn btn-dark">Finalizar Formulario</button><br><br>
 </div>

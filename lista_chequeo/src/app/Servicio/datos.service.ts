@@ -14,10 +14,7 @@ export class DatosService {
   }
 
 
-  //metodo mal echo
-  // public enviarResultados(enviar:any){
-  //   return this.http.get(`${base}/all`,enviar)
-  // }
+ 
   public obtenerFormatos(){
     return this.http.get(`${base}/all`)
   }
