@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
       showConfirmButton: false,
       timer:2000
     })
-    this.router.navigate(['opciones'])
+    this.router.navigate(['resultados'])
   }
 
 }

@@ -9,7 +9,9 @@ export class DatosService {
 
   constructor(private http: HttpClient) { }
 
-  public enviarResultados(enviar:any){
-    return this.http.get(`${base}/all`,enviar)
+  public obtenerAlmacenes(){
+    return this.http.get(`${base}/all`)
   }
+
+
 }
