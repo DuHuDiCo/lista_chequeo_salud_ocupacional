@@ -18,8 +18,12 @@ export class DatosService {
   // public enviarResultados(enviar:any){
   //   return this.http.get(`${base}/all`,enviar)
   // }
-  public obtenerAlmacenes(){
+  public obtenerFormatos(){
     return this.http.get(`${base}/all`)
+  }
+
+  public obtenerAlmacenes(){
+    return this.http.get(`${base}/almacenes`)
   }
 
 

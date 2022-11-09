@@ -101,10 +101,12 @@ export class DatosComponent implements OnInit {
     "ruta": ''
   }
 
+  almacenes:any=[]
 
   constructor(private sanitizer: DomSanitizer, private formatoService: DatosService, private toast: NgToastService) { }
 
   ngOnInit(): void {
+    this.obtenerAlmacenes();
   }
 
   public file(event: any, name: any, cate: any) {
@@ -279,6 +281,18 @@ export class DatosComponent implements OnInit {
           duration: 3500
         })
         console.log(error)
+      }
+    );
+  }
+
+
+  public obtenerAlmacenes(){
+    this.formatoService.obtenerAlmacenes().subscribe(
+      (data:any)=>{
+        this.almacenes = data;
+        
+      },(error:any)=>{
+        console.log(error);
       }
     );
   }

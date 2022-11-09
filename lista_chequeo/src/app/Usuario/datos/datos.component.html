@@ -37,23 +37,10 @@
 
         <div class="mb-3">
             <select class="form-select" aria-label="Default select example">
-                <option selected>Seleccione su almacen</option>
-                <option value="1">ANDES</option>
-                <option value="2">BOYACA</option>
-                <option value="3">CALDAS</option>
-                <option value="4">LA CEJA</option>
-                <option value="5">CREDITOS</option>
-                <option value="6">CREDITOS2</option>
-                <option value="7">ELECTRO</option>
-                <option value="8">ELECTRO2</option>
-                <option value="9">GUARNE</option>
-                <option value="10">ITAGUI</option>
-                <option value="11">MAGDA</option>
-                <option value="12">MARINILLA</option>
-                <option value="13">PBOYACA</option>
-                <option value="14">RIONEGRO</option>
-                <option value="15">TAMESIS</option>
-                <option value="16">YOLOMBO</option>
+                <option selected value="">Seleccione su almacen</option>
+                <option  value="{{a.nombre}}" *ngFor="let a of almacenes">{{a.nombre}}</option>
+                
+
             </select>
         </div>
     </form><br>
