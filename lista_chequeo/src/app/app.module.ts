@@ -12,6 +12,7 @@ import { LoginComponent } from './Usuario/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgToastModule } from 'ng-angular-popup';
 import { ModalComponent } from './Usuario/resultados/modal/modal.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
@@ -31,7 +32,7 @@ import { ModalComponent } from './Usuario/resultados/modal/modal.component';
     FormsModule,
     NgToastModule
   ],
-  providers: [],
+  providers: [{provide:LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
