@@ -13,6 +13,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgToastModule } from 'ng-angular-popup';
 import { ModalComponent } from './Usuario/resultados/modal/modal.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { LoadingComponent } from './Usuario/datos/loading/loading.component';
+import { SuccesComponent } from './Usuario/succes/succes.component';
 
 
 
@@ -23,7 +25,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FileComponent,
     ResultadosComponent,
     ModalComponent,
-    LoginComponent
+    LoginComponent,
+    LoadingComponent,
+    SuccesComponent
   ],
   imports: [
     BrowserModule,

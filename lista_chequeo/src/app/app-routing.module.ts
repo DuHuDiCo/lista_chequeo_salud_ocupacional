@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DatosComponent } from './Usuario/datos/datos.component';
 import { LoginComponent } from './Usuario/login/login.component';
 import { ResultadosComponent } from './Usuario/resultados/resultados.component';
+import { SuccesComponent } from './Usuario/succes/succes.component';
 
 const routes: Routes = [  
 {path: '', redirectTo:'datos' , pathMatch:'full' },
@@ -16,6 +17,11 @@ const routes: Routes = [
   path:'login', 
   component:LoginComponent,
   children:[]
+},
+{
+  path:'success',
+  component:SuccesComponent,
+  pathMatch:'full'
 }
 ];
 
