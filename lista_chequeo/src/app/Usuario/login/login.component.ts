@@ -14,11 +14,27 @@ export class LoginComponent implements OnInit {
     password:""
   }
 
+
   constructor(private router:Router) { }
 
   ngOnInit(): void {}
 
+  
+
   public iniciarSesion(){
+    if(this.login.username == ''){
+
+    }else{
+      if (this.login.password == ''){
+
+      }else{
+        //enviar datos al backend
+        
+      }
+    }
+    
+    
+
     Swal.fire({
       position:'top-end',
       icon:'success',
