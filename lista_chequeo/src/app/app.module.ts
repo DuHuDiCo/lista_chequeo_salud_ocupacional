@@ -7,10 +7,16 @@ import { AppComponent } from './app.component';
 import { DatosComponent } from './Usuario/datos/datos.component';
 import { FileComponent } from './Usuario/file/file.component';
 import { ResultadosComponent } from './Usuario/resultados/resultados.component';
-import { ModalComponent } from './Usuario/modal/modal.component';
+
 import { LoginComponent } from './Usuario/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NgToastModule } from 'ng-angular-popup';
+import { ModalComponent } from './Usuario/resultados/modal/modal.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { LoadingComponent } from './Usuario/datos/loading/loading.component';
+import { SuccesComponent } from './Usuario/succes/succes.component';
+import { VistaComponent } from './Usuario/resultados/vista/vista.component';
+import { ReportesComponent } from './Usuario/resultados/reportes/reportes.component';
 
 
 
@@ -21,7 +27,11 @@ import { NgToastModule } from 'ng-angular-popup';
     FileComponent,
     ResultadosComponent,
     ModalComponent,
-    LoginComponent
+    LoginComponent,
+    LoadingComponent,
+    SuccesComponent,
+    VistaComponent,
+    ReportesComponent
   ],
   imports: [
     BrowserModule,
@@ -30,7 +40,7 @@ import { NgToastModule } from 'ng-angular-popup';
     FormsModule,
     NgToastModule
   ],
-  providers: [],
+  providers: [{provide:LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

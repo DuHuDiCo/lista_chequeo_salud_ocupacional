@@ -1,0 +1,236 @@
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Estas son las respuestas de los almacenes </h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="dato == 'sustanciasQuimicas'" class="col-md-10 offset-md-1">
+          <h5>Elementos a inspeccionar</h5><br>
+          <label for=""> Se cuenta con las hojas de seguridad de las sustancias quimicas:</label>
+          <label *ngIf="sustanciasQuimicas.hojas_seguridad_sustancias_quimicas"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!sustanciasQuimicas.hojas_seguridad_sustancias_quimicas"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for=""> Las sustancias quimicas se encuentran debidamente etiquetadas:</label>
+          <label *ngIf="sustanciasQuimicas.sustancias_quimicas_etiquetadas"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!sustanciasQuimicas.sustancias_quimicas_etiquetadas"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for=""> Se cuenta con gafas de seguridad y guantes de nitrilo o caucho para manipular las sustancias
+            quimicas:</label>
+          <label *ngIf="sustanciasQuimicas.gafas_seguridad_guantes_nitrilo"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!sustanciasQuimicas.gafas_seguridad_guantes_nitrilo"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+
+
+          <label for=""> Las sustancias quimicas se encuentran debidamente almacenadas:</label>
+          <label *ngIf="sustanciasQuimicas.sustancias_quimicas_almacenadas"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!sustanciasQuimicas.sustancias_quimicas_almacenadas"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for=""> Observaciones:</label><br>
+          <label>{{sustanciasQuimicas.observaciones}}</label>
+
+          <br>
+        </div>
+
+        <div *ngIf="dato == 'peligrosMecanicos'" class="col-md-10 offset-md-1">
+          <h5>PELIGROS MECÁNICOS</h5><br>
+          <label for="">Equipos y herramientas en buen estado:</label><br>
+          <label *ngIf="peligrosMecanicos.equipos_herramientas_buen_estado"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosMecanicos.equipos_herramientas_buen_estado"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for=""> Observaciones:</label><br>
+          <label>{{peligrosMecanicos.observaciones}}</label>
+        </div>
+
+        <div *ngIf="dato == 'peligrosElectricos'" class="col-md-10 offset-md-1">
+          <h5>PELIGROS ELECTRICOS</h5><br>
+          <label for="">Cables eléctricos en buen estado y debidamente entubados. (sin adiciones o cintas):</label><br>
+          <label *ngIf="peligrosElectricos.cables_buen_estado_entubados"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosElectricos.cables_buen_estado_entubados"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Los empalmes o conexiones están en buen estado.:</label><br>
+          <label *ngIf="peligrosElectricos.empalmes_conexiones_buen_estado"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosElectricos.empalmes_conexiones_buen_estado"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Tomas e interruptores en buen estado, cuentan con la tapa de protección, están debidamente anclados y señalizados:</label><br>
+          <label *ngIf="peligrosElectricos.tomas_buen_estado_tapa_proteccion"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosElectricos.tomas_buen_estado_tapa_proteccion"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Las cajas de breakers están sin sobrecarga y señalizadas:</label><br>
+          <label *ngIf="peligrosElectricos.cajas_breakers_sin_sobrecarga_senaladas"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosElectricos.cajas_breakers_sin_sobrecarga_senaladas"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Los tableros y cajas de breakers están libres de material combustible alrededor:</label><br>
+          <label *ngIf="peligrosElectricos.tableros_caja_breakers_sin_material_combustible"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosElectricos.tableros_caja_breakers_sin_material_combustible"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for=""> Observaciones:</label><br>
+          <label>{{peligrosElectricos.observaciones}}</label>
+        </div>
+
+
+        <div *ngIf="dato == 'peligrosLocativos'" class="col-md-10 offset-md-1">
+          <h5>PELIGROS LOCATIVOS</h5><br>
+          <label for="">Las luminarias se encuentran en buen estado:</label><br>
+          <label *ngIf="peligrosLocativos.luminarias_buen_estado"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosLocativos.luminarias_buen_estado"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Los muros están en buen estado (Sin grietas, sin humedad, pintura buen estado).:</label><br>
+          <label *ngIf="peligrosLocativos.muros_buen_estado"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosLocativos.muros_buen_estado"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Escaleras en buen estado (pasamanos, cintas antideslizantes):</label><br>
+          <label *ngIf="peligrosLocativos.escaleras_buen_estado"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosLocativos.escaleras_buen_estado"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Pisos en buen estado, sin grietas o desniveles:</label><br>
+          <label *ngIf="peligrosLocativos.pisos_buen_estado"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosLocativos.pisos_buen_estado"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Ventanas, puertas en buen estado (manijas, chapas, sin vidrios fracturados).:</label><br>
+          <label *ngIf="peligrosLocativos.ventanas_puertas_buen_estado"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosLocativos.ventanas_puertas_buen_estado"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Techos en buen estado (tejas sin fisuras o rotas, sin goteras).:</label><br>
+          <label *ngIf="peligrosLocativos.techos_buen_estado"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosLocativos.techos_buen_estado"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Áreas de circulación despejadas (escaleras, zonas de transito en almacén, etc.).:</label><br>
+          <label *ngIf="peligrosLocativos.areas_circulacion_despejadas"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosLocativos.areas_circulacion_despejadas"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">La sillas y escritorios se encuentran en buen estado:</label><br>
+          <label *ngIf="peligrosLocativos.silla_escritorios_buen_estado"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosLocativos.silla_escritorios_buen_estado"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Las divisiones modulares, escritorio y cajones se encuentran en buenas condiciones. (anclados y ajustados):</label><br>
+          <label *ngIf="peligrosLocativos.divisiones_modulares_escritorio_cajones_buenas_condiciones"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosLocativos.divisiones_modulares_escritorio_cajones_buenas_condiciones"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for=""> Observaciones:</label><br>
+          <label>{{peligrosLocativos.observaciones}}</label>
+        </div>
+
+        <div *ngIf="dato == 'emergencias'" class="col-md-10 offset-md-1">
+          <h5>EMERGENCIAS</h5><br>
+          <label for="">La ruta de evacuación se encuentra señalizada y libre de obstáculos:</label><br>
+          <label *ngIf="emergencias.ruta_evacuacion_senalizada_libre_obstaculos"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!emergencias.ruta_evacuacion_senalizada_libre_obstaculos"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Las salida de emergencia y punto de encuentro se encuentran despejadas y señalizadas:</label><br>
+          <label *ngIf="emergencias.salida_emergencia_punto_encuentro_senalizadas_despejadas"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!emergencias.salida_emergencia_punto_encuentro_senalizadas_despejadas"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">La lista de teléfonos de emergencia publicada y socializada:</label><br>
+          <label *ngIf="emergencias.lista_telefonos_emergencia_publicada_socializada"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!emergencias.lista_telefonos_emergencia_publicada_socializada"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Los extintores se encuentran en buen estado, recargados, señalizados y libres de obstáculos:</label><br>
+          <label *ngIf="emergencias.extintores_buen_estado_recargados_senalizados_libre_obstaculos"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!emergencias.extintores_buen_estado_recargados_senalizados_libre_obstaculos"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Se cuenta con camilla de emergencia, esta en buen estado, cuenta con cuello inmovilizador, correas de sujeción y se encuentra libre de obstáculos:</label><br>
+          <label *ngIf="emergencias.camilla_emergencia_buen_estado_cuello_inmovilizador"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!emergencias.camilla_emergencia_buen_estado_cuello_inmovilizador"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">El botiquín se encuentra en buen estado y cuenta con los elementos necesarios para la atención de primeros auxilios:</label><br>
+          <label *ngIf="emergencias.botiquin_buen_estado_elementos_necesarios"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!emergencias.botiquin_buen_estado_elementos_necesarios"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for=""> Observaciones:</label><br>
+          <label>{{emergencias.observaciones}}</label>
+        </div>
+
+        <div *ngIf="dato == 'ordenAseo'" class="col-md-10 offset-md-1">
+          <h5>ORDEN Y ASEO</h5><br>
+          <label for="">El punto de venta se encuentra en buen estado de aseo y mantenimiento.:</label><br>
+          <label *ngIf="ordenAseo.punto_venta_buen_estado_aseo_mantenimiento"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!ordenAseo.punto_venta_buen_estado_aseo_mantenimiento"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Los archivadores se encuentran organizados y los documentos o libros debidamente almacenados:</label><br>
+          <label *ngIf="ordenAseo.archivadores_organizados_documento_libros_almacenados"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!ordenAseo.archivadores_organizados_documento_libros_almacenados"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for=""> Observaciones:</label><br>
+          <label>{{ordenAseo.observaciones}}</label>
+        </div>
+
+
+        <div *ngIf="dato == 'saneamientoBasico'" class="col-md-10 offset-md-1">
+          <h5>SANEAMIENTO BASICO</h5><br>
+          <label for="">Se cuenta con puntos ecológicos de disposición de residuos:</label><br>
+          <label *ngIf="saneamientoBasico.puntos_ecologicos_residuos"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!saneamientoBasico.puntos_ecologicos_residuos"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Se cuenta con guantes ne nitrilo o caucho para manipular los residuos:</label><br>
+          <label *ngIf="saneamientoBasico.guantes_nitrilo_caucho"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!saneamientoBasico.guantes_nitrilo_caucho"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">El cuarto de residuos se encuentra limpio:</label><br>
+          <label *ngIf="saneamientoBasico.cuarto_residuos_limpio"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!saneamientoBasico.cuarto_residuos_limpio"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">El servicio sanitario esta en optimas condiciones:</label><br>
+          <label *ngIf="saneamientoBasico.servicio_sanitario_optimas_condiciones"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!saneamientoBasico.servicio_sanitario_optimas_condiciones"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Los baños cuentan con papel higiénico, jabón, toallas y papeleras con pedal y tapa.:</label><br>
+          <label *ngIf="saneamientoBasico.banos_papel_higienico_jabon_toallas_papeleras"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!saneamientoBasico.banos_papel_higienico_jabon_toallas_papeleras"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for="">Se han identificado insectos o roedores, se han fumigado las áreas:</label><br>
+          <label *ngIf="saneamientoBasico.insectos_roedores_fumigado_areas"><i class="fas fa-check"></i> </label>
+          <label *ngIf="!saneamientoBasico.insectos_roedores_fumigado_areas"><i class="fas fa-times"></i></label>
+          <br>
+          <br>
+          <label for=""> Observaciones:</label><br>
+          <label>{{saneamientoBasico.observaciones}}</label>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+
+
+    </div>
+    
+  </div>
+</div>

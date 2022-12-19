@@ -3,6 +3,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 import { DatosService } from 'src/app/Servicio/datos.service';
 import { NgToastService } from 'ng-angular-popup';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-datos',
@@ -11,7 +12,7 @@ import Swal from 'sweetalert2';
 })
 export class DatosComponent implements OnInit {
 
-
+  valid = false;
 
   formatoInspeccion = {
     codigo: "",
@@ -101,9 +102,9 @@ export class DatosComponent implements OnInit {
     "ruta": ''
   }
 
-  almacenes:any=[]
+  almacenes: any = []
 
-  constructor(private sanitizer: DomSanitizer, private formatoService: DatosService, private toast: NgToastService) { }
+  constructor(private sanitizer: DomSanitizer, private formatoService: DatosService, private toast: NgToastService, private router: Router) { }
 
   ngOnInit(): void {
     this.obtenerAlmacenes();
@@ -153,6 +154,18 @@ export class DatosComponent implements OnInit {
 
   }
   print() {
+    this.valid = true
+    setTimeout(() => {
+      this.valid = false;
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Formato Guardado Correctamente',
+        showConfirmButton: false,
+        timer: 2000
+      })
+      this.router.navigate(['/success']);
+    }, 6000);
     console.log(this.formatoInspeccion)
   }
 
@@ -246,7 +259,19 @@ export class DatosComponent implements OnInit {
                     duration: 3500
                   })
                 } else {
-                  this.guardarServices();
+                  if (this.formatoInspeccion.punto_venta == '' || this.formatoInspeccion.realizadoBy == '' || this.formatoInspeccion.fecha_inspeccion == '') {
+                    this.toast.error({
+                      detail: "Error",
+                      summary: "Existen datos Vacios",
+                      position: "br",
+                      duration: 3500
+                    })
+
+                  } else {
+                    this.valid = true;
+                    this.guardarServices();
+                  }
+
 
                 }
               }
@@ -263,6 +288,8 @@ export class DatosComponent implements OnInit {
   private guardarServices() {
     this.formatoService.guardarFormato(this.formatoInspeccion).subscribe(
       (data: any) => {
+        this.valid = false;
+
         Swal.fire({
           position: 'top-end',
           icon: 'success',
@@ -270,10 +297,11 @@ export class DatosComponent implements OnInit {
           showConfirmButton: false,
           timer: 2000
         })
+        this.router.navigate(['/success']);
         console.log(data);
 
       }, (error: any) => {
-
+        this.valid = false;
         this.toast.error({
           detail: "Error",
           summary: "Hubo un error",
@@ -286,12 +314,13 @@ export class DatosComponent implements OnInit {
   }
 
 
-  public obtenerAlmacenes(){
+  public obtenerAlmacenes() {
     this.formatoService.obtenerAlmacenes().subscribe(
-      (data:any)=>{
+      (data: any) => {
         this.almacenes = data;
-        
-      },(error:any)=>{
+
+
+      }, (error: any) => {
         console.log(error);
       }
     );
