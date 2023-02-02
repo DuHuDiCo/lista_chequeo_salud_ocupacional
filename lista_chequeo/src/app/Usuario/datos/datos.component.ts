@@ -45,6 +45,9 @@ export class DatosComponent implements OnInit {
     cajas_breakers_sin_sobrecarga_senaladas: '',
     tableros_caja_breakers_sin_material_combustible: '',
     observaciones: '',
+    observaciones_u: '',
+    observaciones_2: '',
+    observaciones_t: '',
     evidencias: []
   }
 
