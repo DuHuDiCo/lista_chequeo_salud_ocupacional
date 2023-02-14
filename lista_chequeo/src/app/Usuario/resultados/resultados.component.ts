@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
 import { DatosService } from 'src/app/Servicio/datos.service';
 import { EmitirDatosService } from 'src/app/Servicio/emitir-datos.service';
+import Swal from 'sweetalert2';
 import { DatosComponent } from '../datos/datos.component';
 import { ModalComponent } from './modal/modal.component';
 
@@ -27,6 +28,8 @@ export class ResultadosComponent implements OnInit {
 
     this.formatoService.obtenerFormatos().subscribe(
       (data:any)=>{
+        
+        
         let formatos = data;
         let formatosOk:any = []
         formatos.forEach((f:any) => {
@@ -60,6 +63,24 @@ export class ResultadosComponent implements OnInit {
     return contador    
   }
 
+
+  public cambiarEstado(id:number){
+    this.formatoService.cambiarEstado(id).subscribe(
+      (data:any)=>{
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Guardado Correctamente',
+          showConfirmButton: false,
+          timer: 2000
+        })
+        this.formatos = this.formatos.filter((f:any)=> f.id != id);
+      },(error:any)=>{
+        console.log(error);
+        
+      }
+    )
+  }
   
 
  

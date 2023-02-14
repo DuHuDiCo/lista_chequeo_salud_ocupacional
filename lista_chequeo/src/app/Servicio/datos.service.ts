@@ -24,4 +24,8 @@ export class DatosService {
   }
 
 
+  public cambiarEstado(id:number){
+    return this.http.get(`${base}/cambiarEstado/${id}`)
+  }
+
 }
