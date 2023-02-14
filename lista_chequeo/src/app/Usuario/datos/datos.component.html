@@ -93,17 +93,17 @@
             <ul class="list-group">
                 <li class="list-group-item">
                     <input class="form-check-input me-1" type="radio" name="sustancias_quimacas_etiquetadas"
-                        value="true" [(ngModel)]="sustanciasQuimicas.sustancias_quimicas_etiquetadas" id="firstRadio">
+                        value="true" [(ngModel)]="sustanciasQuimicas.sustancias_quimacas_etiquetadas" id="firstRadio">
                     <label class="form-check-label" for="firstRadio">Si</label>
                 </li>
                 <li class="list-group-item">
                     <input class="form-check-input me-1" type="radio" name="sustancias_quimacas_etiquetadas"
-                        value="false" [(ngModel)]="sustanciasQuimicas.sustancias_quimicas_etiquetadas" id="secondRadio">
+                        value="false" [(ngModel)]="sustanciasQuimicas.sustancias_quimacas_etiquetadas" id="secondRadio">
                     <label class="form-check-label" for="secondRadio">No</label>
                 </li>
 
             </ul><br>
-            <div *ngIf="sustanciasQuimicas.sustancias_quimicas_etiquetadas == 'false'">
+            <div *ngIf="sustanciasQuimicas.sustancias_quimacas_etiquetadas == 'false'">
                 <div class="mb-3">
                     <label for="formFile" class="form-label">Agregar una Evidencia o foto</label>
                     <input capture="camera"

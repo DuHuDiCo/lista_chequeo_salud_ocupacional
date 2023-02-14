@@ -31,7 +31,7 @@ export class DatosComponent implements OnInit {
 
   sustanciasQuimicas = {
     hojas_seguridad_sustancias_quimicas: '',
-    sustancias_quimicas_etiquetadas: '',
+    sustancias_quimacas_etiquetadas: '',
     gafas_seguridad_guantes_nitrilo: '',
     sustancias_quimicas_almacenadas: '',
     observaciones: '',
@@ -202,7 +202,7 @@ export class DatosComponent implements OnInit {
     this.formatoInspeccion.ordenAseo = this.ordenAseo;
     this.formatoInspeccion.saneamientoBasico = this.saneamientoBasico;
 
-    if (this.sustanciasQuimicas.gafas_seguridad_guantes_nitrilo == '' || this.sustanciasQuimicas.hojas_seguridad_sustancias_quimicas == '' || this.sustanciasQuimicas.sustancias_quimicas_almacenadas == '' || this.sustanciasQuimicas.sustancias_quimicas_etiquetadas == '') {
+    if (this.sustanciasQuimicas.gafas_seguridad_guantes_nitrilo == '' || this.sustanciasQuimicas.hojas_seguridad_sustancias_quimicas == '' || this.sustanciasQuimicas.sustancias_quimicas_almacenadas == '' || this.sustanciasQuimicas.sustancias_quimacas_etiquetadas == '') {
       this.toast.error({
         detail: "Error",
         summary: "Existen datos Vacios",
