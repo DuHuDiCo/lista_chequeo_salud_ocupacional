@@ -3,7 +3,14 @@
         <div class="col-md-12 ">
             <div class="card  shadow p-3 mb-5 bg-body rounded">
                 <div class="card-body">
-                    <h2>Resultado de todos los almacenes </h2>
+                    <div class="row">
+                        <div class="col-md-10">
+                            <h2>Resultado de todos los almacenes </h2>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary" (click)="generarReporte()">Generar Reporte</button>
+                        </div>
+                    </div>
                     <div class="table-responsive ">
                         <table class="table">
                             <thead class="table-dark">

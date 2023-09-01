@@ -28,4 +28,8 @@ export class DatosService {
     return this.http.get(`${base}/cambiarEstado/${id}`)
   }
 
+  generarReporte(){
+    return this.http.get(`${base}/reporte/`)
+  }
+
 }

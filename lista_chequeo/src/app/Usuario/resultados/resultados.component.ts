@@ -44,6 +44,8 @@ export class ResultadosComponent implements OnInit {
         });
         this.formatos = formatosOk;
         
+        console.log(data);
+        
         
       },(error:any)=>{
         console.log(error);
@@ -83,6 +85,29 @@ export class ResultadosComponent implements OnInit {
   }
   
 
+
+  generarReporte(){
+
+    this.formatoService.generarReporte().subscribe(
+      (data:any)=>{
+        const dowloandLink = document.createElement('a');
+        dowloandLink.href = "data:application/vnd.openxmlformats-officedocument.spreadsheetml.sheet;base64,"+data.ruta
+        dowloandLink.download = data.nombreReporte
+        dowloandLink.target = '_blank'
+
+        document.body.appendChild(dowloandLink)
+        dowloandLink.click()
+        document.body.removeChild(dowloandLink)
+        
+        window.location.reload()
+
+      },(error:any)=>{
+        console.log(error);
+        
+      }
+    )
+
+  }
  
 
 }
