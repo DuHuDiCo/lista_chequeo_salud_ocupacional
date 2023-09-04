@@ -8,7 +8,7 @@ import { EmitirDatosService } from 'src/app/Servicio/emitir-datos.service';
 })
 export class ModalComponent implements OnInit {
 
-  sustanciasQuimicas = {
+  sustanciasQuimicas:any = {
     hojas_seguridad_sustancias_quimicas: '',
     sustancias_quimicas_etiquetadas: '',
     gafas_seguridad_guantes_nitrilo: '',
@@ -19,7 +19,7 @@ export class ModalComponent implements OnInit {
     id: ''
   }
 
-  peligrosElectricos = {
+  peligrosElectricos:any = {
     cables_buen_estado_entubados: '',
     empalmes_conexiones_buen_estado: '',
     tomas_buen_estado_tapa_proteccion: '',
@@ -30,14 +30,14 @@ export class ModalComponent implements OnInit {
     contador: ''
   }
 
-  peligrosMecanicos = {
+  peligrosMecanicos :any= {
     equipos_herramientas_buen_estado: '',
     observaciones: '',
     evidencias: [],
     contador: ''
   }
 
-  peligrosLocativos = {
+  peligrosLocativos:any = {
     luminarias_buen_estado: '',
     muros_buen_estado: '',
     escaleras_buen_estado: '',
@@ -52,7 +52,7 @@ export class ModalComponent implements OnInit {
     contador: ''
   }
 
-  emergencias = {
+  emergencias:any = {
     ruta_evacuacion_senalizada_libre_obstaculos: '',
     salida_emergencia_punto_encuentro_senalizadas_despejadas: '',
     lista_telefonos_emergencia_publicada_socializada: '',
@@ -64,7 +64,7 @@ export class ModalComponent implements OnInit {
     contador: ''
   }
 
-  ordenAseo = {
+  ordenAseo :any= {
     punto_venta_buen_estado_aseo_mantenimiento: '',
     archivadores_organizados_documento_libros_almacenados: '',
     observaciones: '',
@@ -72,7 +72,7 @@ export class ModalComponent implements OnInit {
     contador: ''
   }
 
-  saneamientoBasico = {
+  saneamientoBasico:any = {
     puntos_ecologicos_residuos: '',
     guantes_nitrilo_caucho: '',
     cuarto_residuos_limpio: '',

@@ -38,6 +38,27 @@
           <label for=""> Observaciones:</label><br>
           <label>{{sustanciasQuimicas.observaciones}}</label>
 
+          <div>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" *ngFor="let i of sustanciasQuimicas.evidencias">
+                  <img src="data:image/jpg;base64,{{i.ruta}}" class="d-block w-100" alt="..." style="height: 300px;">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
           <br>
         </div>
 
@@ -64,23 +85,50 @@
           <label *ngIf="!peligrosElectricos.empalmes_conexiones_buen_estado"><i class="fas fa-times"></i></label>
           <br>
           <br>
-          <label for="">Tomas e interruptores en buen estado, cuentan con la tapa de protección, están debidamente anclados y señalizados:</label><br>
+          <label for="">Tomas e interruptores en buen estado, cuentan con la tapa de protección, están debidamente
+            anclados y señalizados:</label><br>
           <label *ngIf="peligrosElectricos.tomas_buen_estado_tapa_proteccion"><i class="fas fa-check"></i> </label>
           <label *ngIf="!peligrosElectricos.tomas_buen_estado_tapa_proteccion"><i class="fas fa-times"></i></label>
           <br>
           <br>
           <label for="">Las cajas de breakers están sin sobrecarga y señalizadas:</label><br>
-          <label *ngIf="peligrosElectricos.cajas_breakers_sin_sobrecarga_senaladas"><i class="fas fa-check"></i> </label>
-          <label *ngIf="!peligrosElectricos.cajas_breakers_sin_sobrecarga_senaladas"><i class="fas fa-times"></i></label>
+          <label *ngIf="peligrosElectricos.cajas_breakers_sin_sobrecarga_senaladas"><i class="fas fa-check"></i>
+          </label>
+          <label *ngIf="!peligrosElectricos.cajas_breakers_sin_sobrecarga_senaladas"><i
+              class="fas fa-times"></i></label>
           <br>
           <br>
           <label for="">Los tableros y cajas de breakers están libres de material combustible alrededor:</label><br>
-          <label *ngIf="peligrosElectricos.tableros_caja_breakers_sin_material_combustible"><i class="fas fa-check"></i> </label>
-          <label *ngIf="!peligrosElectricos.tableros_caja_breakers_sin_material_combustible"><i class="fas fa-times"></i></label>
+          <label *ngIf="peligrosElectricos.tableros_caja_breakers_sin_material_combustible"><i class="fas fa-check"></i>
+          </label>
+          <label *ngIf="!peligrosElectricos.tableros_caja_breakers_sin_material_combustible"><i
+              class="fas fa-times"></i></label>
           <br>
           <br>
           <label for=""> Observaciones:</label><br>
           <label>{{peligrosElectricos.observaciones}}</label>
+
+          <div>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" *ngFor="let i of peligrosElectricos.evidencias">
+                  <img src="data:image/jpg;base64,{{i.ruta}}" class="d-block w-100" alt="..." style="height: 300px;">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
         </div>
 
 
@@ -126,13 +174,39 @@
           <label *ngIf="!peligrosLocativos.silla_escritorios_buen_estado"><i class="fas fa-times"></i></label>
           <br>
           <br>
-          <label for="">Las divisiones modulares, escritorio y cajones se encuentran en buenas condiciones. (anclados y ajustados):</label><br>
-          <label *ngIf="peligrosLocativos.divisiones_modulares_escritorio_cajones_buenas_condiciones"><i class="fas fa-check"></i> </label>
-          <label *ngIf="!peligrosLocativos.divisiones_modulares_escritorio_cajones_buenas_condiciones"><i class="fas fa-times"></i></label>
+          <label for="">Las divisiones modulares, escritorio y cajones se encuentran en buenas condiciones. (anclados y
+            ajustados):</label><br>
+          <label *ngIf="peligrosLocativos.divisiones_modulares_escritorio_cajones_buenas_condiciones"><i
+              class="fas fa-check"></i> </label>
+          <label *ngIf="!peligrosLocativos.divisiones_modulares_escritorio_cajones_buenas_condiciones"><i
+              class="fas fa-times"></i></label>
           <br>
           <br>
           <label for=""> Observaciones:</label><br>
           <label>{{peligrosLocativos.observaciones}}</label>
+
+
+          <div>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" *ngFor="let i of peligrosLocativos.evidencias">
+                  <img src="data:image/jpg;base64,{{i.ruta}}" class="d-block w-100" alt="..." style="height: 300px;">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+
         </div>
 
         <div *ngIf="dato == 'emergencias'" class="col-md-10 offset-md-1">
@@ -142,33 +216,67 @@
           <label *ngIf="!emergencias.ruta_evacuacion_senalizada_libre_obstaculos"><i class="fas fa-times"></i></label>
           <br>
           <br>
-          <label for="">Las salida de emergencia y punto de encuentro se encuentran despejadas y señalizadas:</label><br>
-          <label *ngIf="emergencias.salida_emergencia_punto_encuentro_senalizadas_despejadas"><i class="fas fa-check"></i> </label>
-          <label *ngIf="!emergencias.salida_emergencia_punto_encuentro_senalizadas_despejadas"><i class="fas fa-times"></i></label>
+          <label for="">Las salida de emergencia y punto de encuentro se encuentran despejadas y
+            señalizadas:</label><br>
+          <label *ngIf="emergencias.salida_emergencia_punto_encuentro_senalizadas_despejadas"><i
+              class="fas fa-check"></i> </label>
+          <label *ngIf="!emergencias.salida_emergencia_punto_encuentro_senalizadas_despejadas"><i
+              class="fas fa-times"></i></label>
           <br>
           <br>
           <label for="">La lista de teléfonos de emergencia publicada y socializada:</label><br>
-          <label *ngIf="emergencias.lista_telefonos_emergencia_publicada_socializada"><i class="fas fa-check"></i> </label>
-          <label *ngIf="!emergencias.lista_telefonos_emergencia_publicada_socializada"><i class="fas fa-times"></i></label>
+          <label *ngIf="emergencias.lista_telefonos_emergencia_publicada_socializada"><i class="fas fa-check"></i>
+          </label>
+          <label *ngIf="!emergencias.lista_telefonos_emergencia_publicada_socializada"><i
+              class="fas fa-times"></i></label>
           <br>
           <br>
-          <label for="">Los extintores se encuentran en buen estado, recargados, señalizados y libres de obstáculos:</label><br>
-          <label *ngIf="emergencias.extintores_buen_estado_recargados_senalizados_libre_obstaculos"><i class="fas fa-check"></i> </label>
-          <label *ngIf="!emergencias.extintores_buen_estado_recargados_senalizados_libre_obstaculos"><i class="fas fa-times"></i></label>
+          <label for="">Los extintores se encuentran en buen estado, recargados, señalizados y libres de
+            obstáculos:</label><br>
+          <label *ngIf="emergencias.extintores_buen_estado_recargados_senalizados_libre_obstaculos"><i
+              class="fas fa-check"></i> </label>
+          <label *ngIf="!emergencias.extintores_buen_estado_recargados_senalizados_libre_obstaculos"><i
+              class="fas fa-times"></i></label>
           <br>
           <br>
-          <label for="">Se cuenta con camilla de emergencia, esta en buen estado, cuenta con cuello inmovilizador, correas de sujeción y se encuentra libre de obstáculos:</label><br>
-          <label *ngIf="emergencias.camilla_emergencia_buen_estado_cuello_inmovilizador"><i class="fas fa-check"></i> </label>
-          <label *ngIf="!emergencias.camilla_emergencia_buen_estado_cuello_inmovilizador"><i class="fas fa-times"></i></label>
+          <label for="">Se cuenta con camilla de emergencia, esta en buen estado, cuenta con cuello inmovilizador,
+            correas de sujeción y se encuentra libre de obstáculos:</label><br>
+          <label *ngIf="emergencias.camilla_emergencia_buen_estado_cuello_inmovilizador"><i class="fas fa-check"></i>
+          </label>
+          <label *ngIf="!emergencias.camilla_emergencia_buen_estado_cuello_inmovilizador"><i
+              class="fas fa-times"></i></label>
           <br>
           <br>
-          <label for="">El botiquín se encuentra en buen estado y cuenta con los elementos necesarios para la atención de primeros auxilios:</label><br>
+          <label for="">El botiquín se encuentra en buen estado y cuenta con los elementos necesarios para la atención
+            de primeros auxilios:</label><br>
           <label *ngIf="emergencias.botiquin_buen_estado_elementos_necesarios"><i class="fas fa-check"></i> </label>
           <label *ngIf="!emergencias.botiquin_buen_estado_elementos_necesarios"><i class="fas fa-times"></i></label>
           <br>
           <br>
           <label for=""> Observaciones:</label><br>
           <label>{{emergencias.observaciones}}</label>
+
+
+          <div>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" *ngFor="let i of emergencias.evidencias">
+                  <img src="data:image/jpg;base64,{{i.ruta}}" class="d-block w-100" alt="..." style="height: 300px;">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
         </div>
 
         <div *ngIf="dato == 'ordenAseo'" class="col-md-10 offset-md-1">
@@ -178,13 +286,37 @@
           <label *ngIf="!ordenAseo.punto_venta_buen_estado_aseo_mantenimiento"><i class="fas fa-times"></i></label>
           <br>
           <br>
-          <label for="">Los archivadores se encuentran organizados y los documentos o libros debidamente almacenados:</label><br>
-          <label *ngIf="ordenAseo.archivadores_organizados_documento_libros_almacenados"><i class="fas fa-check"></i> </label>
-          <label *ngIf="!ordenAseo.archivadores_organizados_documento_libros_almacenados"><i class="fas fa-times"></i></label>
+          <label for="">Los archivadores se encuentran organizados y los documentos o libros debidamente
+            almacenados:</label><br>
+          <label *ngIf="ordenAseo.archivadores_organizados_documento_libros_almacenados"><i class="fas fa-check"></i>
+          </label>
+          <label *ngIf="!ordenAseo.archivadores_organizados_documento_libros_almacenados"><i
+              class="fas fa-times"></i></label>
           <br>
           <br>
           <label for=""> Observaciones:</label><br>
           <label>{{ordenAseo.observaciones}}</label>
+
+          <div>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" *ngFor="let i of ordenAseo.evidencias">
+                  <img src="data:image/jpg;base64,{{i.ruta}}" class="d-block w-100" alt="..." style="height: 300px;">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
         </div>
 
 
@@ -211,8 +343,10 @@
           <br>
           <br>
           <label for="">Los baños cuentan con papel higiénico, jabón, toallas y papeleras con pedal y tapa.:</label><br>
-          <label *ngIf="saneamientoBasico.banos_papel_higienico_jabon_toallas_papeleras"><i class="fas fa-check"></i> </label>
-          <label *ngIf="!saneamientoBasico.banos_papel_higienico_jabon_toallas_papeleras"><i class="fas fa-times"></i></label>
+          <label *ngIf="saneamientoBasico.banos_papel_higienico_jabon_toallas_papeleras"><i class="fas fa-check"></i>
+          </label>
+          <label *ngIf="!saneamientoBasico.banos_papel_higienico_jabon_toallas_papeleras"><i
+              class="fas fa-times"></i></label>
           <br>
           <br>
           <label for="">Se han identificado insectos o roedores, se han fumigado las áreas:</label><br>
@@ -222,6 +356,28 @@
           <br>
           <label for=""> Observaciones:</label><br>
           <label>{{saneamientoBasico.observaciones}}</label>
+
+
+          <div>
+            <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active" *ngFor="let i of saneamientoBasico.evidencias">
+                  <img src="data:image/jpg;base64,{{i.ruta}}" class="d-block w-100" alt="..." style="height: 300px;">
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
         </div>
 
         <div class="modal-footer">
@@ -231,6 +387,6 @@
 
 
     </div>
-    
+
   </div>
 </div>
