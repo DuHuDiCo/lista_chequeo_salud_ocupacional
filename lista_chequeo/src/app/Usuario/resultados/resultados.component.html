@@ -4,12 +4,24 @@
             <div class="card  shadow p-3 mb-5 bg-body rounded">
                 <div class="card-body">
                     <div class="row">
-                        <div class="col-md-10">
+                        <div class="col-md-4">
+                            <label for="">Fecha Inicial</label>
+                            <input type="date" [(ngModel)]="fechas.inicial" class="form-control" name="inicial" id="">
+                        </div>
+                        <div class="col-md-4">
+                            <label for="">Fecha Final</label>
+                            <input class="form-control"  [(ngModel)]="fechas.final" type="date" name="final" id="">
+                        </div>
+                        <div class="col-md-4">
+                            <button   class="btn btn-primary " (click)="generarReporte()">Generar Reporte</button>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
                             <h2>Resultado de todos los almacenes </h2>
                         </div>
-                        <div class="col-md-2">
-                            <button class="btn btn-primary" (click)="generarReporte()">Generar Reporte</button>
-                        </div>
+
+
                     </div>
                     <div class="table-responsive ">
                         <table class="table">
@@ -106,7 +118,8 @@
                                             <i class="fas fa-eye"></i>
                                         </button>
                                     </td>
-                                    <td><button class="btn btn-success mt-5" (click)="cambiarEstado(formato.id)"><i class="fas fa-check"></i></button></td>
+                                    <td><button class="btn btn-success mt-5" (click)="cambiarEstado(formato.id)"><i
+                                                class="fas fa-check"></i></button></td>
                                 </tr>
                             </tbody>
                         </table>

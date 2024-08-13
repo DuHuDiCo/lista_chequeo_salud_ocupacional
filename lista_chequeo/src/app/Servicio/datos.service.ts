@@ -15,8 +15,8 @@ export class DatosService {
 
 
  
-  public obtenerFormatos(){
-    return this.http.get(`${base}/all`)
+  public obtenerFormatos(fechaStart:any, fechaEnd:any){
+    return this.http.get(`${base}/all?fechaStart=${fechaStart}&fechaEnd=${fechaEnd}`)
   }
 
   public obtenerAlmacenes(){
@@ -28,8 +28,8 @@ export class DatosService {
     return this.http.get(`${base}/cambiarEstado/${id}`)
   }
 
-  generarReporte(){
-    return this.http.get(`${base}/reporte/`)
+  generarReporte(fechaStart:any, fechaEnd:any){
+    return this.http.get(`${base}/reporte/?fechaStart=${fechaStart}&fechaEnd=${fechaEnd}`)
   }
 
 }
