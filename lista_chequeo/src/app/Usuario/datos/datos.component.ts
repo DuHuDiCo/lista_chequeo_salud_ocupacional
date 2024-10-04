@@ -18,7 +18,7 @@ export class DatosComponent implements OnInit {
     codigo: "",
     fecha: '2021-03-01',
     realizadoBy: '',
-    fecha_inspeccion: '',
+    fechaInspeccion: '',
     punto_venta: '',
     sustanciasQuimicas: {},
     peligrosElectricos: {},
@@ -259,7 +259,7 @@ export class DatosComponent implements OnInit {
                     duration: 3500
                   })
                 } else {
-                  if (this.formatoInspeccion.punto_venta == '' || this.formatoInspeccion.realizadoBy == '' || this.formatoInspeccion.fecha_inspeccion == '') {
+                  if (this.formatoInspeccion.punto_venta == '' || this.formatoInspeccion.realizadoBy == '' || this.formatoInspeccion.fechaInspeccion == '') {
                     this.toast.error({
                       detail: "Error",
                       summary: "Existen datos Vacios",
